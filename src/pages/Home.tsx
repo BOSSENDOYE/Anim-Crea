@@ -20,11 +20,6 @@ interface MessageModalProps {
 // Images pour le carrousel
 const heroImages = [
   {
-  Images:["assets/Assistance Vétérinaire dUrgence avec un Sénégalais.png,"],
-    title: "Assistance Vétérinaire d'Urgence",
-    subtitle: "Des experts disponibles 24/7 pour vos animaux"
-  },
-  {
     url: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=2070&h=800",
     title: "Santé Animale Professionnelle",
     subtitle: "Une équipe qualifiée à votre service"
@@ -88,25 +83,61 @@ const veterinaires: Veterinaire[] = [
     ville: "Dakar",
     disponible: true,
     telephone: "+221 77 123 45 67",
-    photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300&h=300"
+    photo: "src/assets/Assistance Vétérinaire dUrgence avec un Sénégalais.png"
   },
   {
     id: 2,
     nom: "Dr. Moussa Sow",
     specialite: "Volailles",
     ville: "Thiès",
-    disponible: true,
+    disponible: false,
     telephone: "+221 76 234 56 78",
-    photo: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300&h=300"
+    photo: "src/assets/une vétérinaire sénégalaise.png"
   },
   {
     id: 3,
     nom: "Dr. Aminata Fall",
     specialite: "Animaux de compagnie",
     ville: "Saint-Louis",
-    disponible: false,
+    disponible: true,
     telephone: "+221 70 345 67 89",
-    photo: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?auto=format&fit=crop&q=80&w=300&h=300"
+    photo: "src/assets/Assistance Vétérinaire dUrgence.png"
+  },
+  {
+    id: 4,
+    nom: "Dr. Khady Fall",
+    specialite: "Ladoum",
+    ville: "Louga",
+    disponible: true,
+    telephone: "+221 70 345 67 89",
+    photo: "src/assets/Assistance Vétérinaire dUrgence.png"
+  },
+  {
+    id: 5,
+    nom: "Dr. Bosse Ndoye",
+    specialite: "Bovins et Ovins",
+    ville: "Tivaouane",
+    disponible: false,
+    telephone: "+221 70 231 82 32",
+    photo: "src/assets/WhatsApp Image 2025-02-13 à 22.47.43_7952d993.jpg"
+  },
+  {
+    id: 6,
+    nom: "Dr. Momar Ndoye",
+    specialite: "Bovins et Ovins",
+    ville: "Kaolack",
+    disponible: true,
+    telephone: "+221 76 453 24 56",
+    photo: "src/assets/WhatsApp Image 2024-12-16 à 14.16.12_b8b43f56.jpg"
+  },
+  {
+    id: 7,
+    nom: "Dr. khadim",
+    specialite: "Bovins et Ovins",
+    ville: "Diourbel",
+    disponible: true,
+    telephone: "+221 77 231 82 32",
+    photo: "src/assets/WhatsApp Image 2024-12-16 à 14.16.12_b8b43f56.jpg"
   }
 ];
 

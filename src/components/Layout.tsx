@@ -37,7 +37,7 @@ const Layout = () => {
             <div>
               <h4 className="text-xl font-semibold mb-4">Contact</h4>
               <p className="text-gray-400">Email: contact@anim-crea.sn</p>
-              <p className="text-gray-400">Tél: +221 XX XXX XX XX</p>
+              <p className="text-gray-400">Tél: +221 78 157 62 24</p>
             </div>
             <div>
               <h4 className="text-xl font-semibold mb-4">Liens Utiles</h4>

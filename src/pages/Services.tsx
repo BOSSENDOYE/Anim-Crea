@@ -58,7 +58,7 @@ function Services() {
         <div className="mt-16 text-center">
           <h2 className="text-2xl font-bold mb-8">Besoin d'une assistance immédiate ?</h2>
           <a
-            href="tel:+221XXXXXXXX"
+            href="tel:+221 78 157 62 24"
             className="bg-green-600 text-white px-8 py-3 rounded-md hover:bg-green-700 inline-flex items-center"
           >
             <Stethoscope className="mr-2" />
