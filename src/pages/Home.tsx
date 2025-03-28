@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, MapPin, Clock, Search, MessageCircle, Users, X, ChevronLeft, ChevronRight,  } from 'lucide-react';
+import { Phone, MapPin, Clock, Search, MessageCircle, Users, X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 // Types pour les vétérinaires
 interface Veterinaire {
@@ -20,59 +20,16 @@ interface MessageModalProps {
 // Images pour le carrousel
 const heroImages = [
   {
-    url: "https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=2070&h=800",
+    url: "src/assets/th.jpg",
     title: "Santé Animale Professionnelle",
     subtitle: "Une équipe qualifiée à votre service"
   },
   {
-    url: "https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=2070&h=800",
+    url: "src/assets/une couverture nationale pour une application de suivi délevage avec un Senegalais (1).png",
     title: "Couverture Nationale",
     subtitle: "Présents dans toutes les régions du Sénégal"
   }
 ];
-
-const MessageModal: React.FC<MessageModalProps> = ({ veterinaire, onClose }) => {
-  const [message, setMessage] = useState('');
-
-  if (!veterinaire) return null;
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert('Message envoyé avec succès !');
-    setMessage('');
-    onClose();
-  };
-
-  return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-lg p-6 w-full max-w-md">
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-xl font-semibold">Message à {veterinaire.nom}</h3>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
-            <X size={24} />
-          </button>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full p-3 border border-gray-300 rounded-md mb-4 h-32"
-            placeholder="Écrivez votre message ici..."
-            required
-          />
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
-            >
-              Envoyer
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-  );
-};
 
 // Liste des vétérinaires (simulation de données)
 const veterinaires: Veterinaire[] = [
@@ -140,6 +97,49 @@ const veterinaires: Veterinaire[] = [
     photo: "src/assets/WhatsApp Image 2024-12-16 à 14.16.12_b8b43f56.jpg"
   }
 ];
+
+const MessageModal: React.FC<MessageModalProps> = ({ veterinaire, onClose }) => {
+  const [message, setMessage] = useState('');
+
+  if (!veterinaire) return null;
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert('Message envoyé avec succès !');
+    setMessage('');
+    onClose();
+  };
+
+  return (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+      <div className="bg-white rounded-lg p-6 w-full max-w-md">
+        <div className="flex justify-between items-center mb-4">
+          <h3 className="text-xl font-semibold">Message à {veterinaire.nom}</h3>
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-700">
+            <X size={24} />
+          </button>
+        </div>
+        <form onSubmit={handleSubmit}>
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            className="w-full p-3 border border-gray-300 rounded-md mb-4 h-32"
+            placeholder="Écrivez votre message ici..."
+            required
+          />
+          <div className="flex justify-end">
+            <button
+              type="submit"
+              className="bg-green-600 text-white px-6 py-2 rounded-md hover:bg-green-700"
+            >
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
 
 function Home() {
   const [selectedVeterinaire, setSelectedVeterinaire] = useState<Veterinaire | null>(null);
