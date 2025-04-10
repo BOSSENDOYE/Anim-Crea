@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { translations } from '../i18n/translations';
-import logo from '../assets/Green White Minimalist Simple Farm Logo .png';
+import logo from '../assets/Green White Minimalist Simple Farm Logo .png?url';
 
 interface NavbarProps {
   language: 'fr' | 'wo';
